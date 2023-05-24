@@ -1,40 +1,498 @@
 <!doctype html>
 <html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Introduction to Quasar & Hybrid Mobile Apps</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/sky.css" id="theme">
 
-		<!-- Theme used for syntax highlighted code -->
+		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.row{
+				display: flex;
+			}
+			.col{
+				width: 50%;
+			}
+
+			.font-size{
+				font-size:smaller
+			}
+			.desktop{
+				display: flex;
+			}
+			.desktop-col{
+				width: 30%;
+			}
+
+			.q-card-section img{
+				color: #fff;
+			}
+
+section h5 {
+  /* Add any desired styles for the h5 element */
+}
+
+.row {
+  /* Add any desired styles for the row element */
+}
+
+.q-card {
+  /* Add any desired styles for the q-card element */
+}
+
+.q-card.bg-grey-8 {
+  background-color: grey;
+}
+
+.q-card.cg-px-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.q-card.cg-mt-2 {
+  margin-top: 2px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.q-card-section {
+	
+  /* Add any desired styles for the q-card-section element */
+}
+
+.q-card-section h5 {
+	color: #fff;
+  /* Add any desired styles for the nested h5 element */
+}
+
+.q-card-section span {
+  /* Add any desired styles for the nested span element */
+}
+
+		</style>
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<a href="https://revealjs.com">
+						<img src="./img/quasarlogo.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h3>Introduction to Quasar & Hybrid Mobile Apps</h3>
+					<p>
+						<small>Created by <a href="http://hakim.se">Divya Sonara</a></small>
+					</p>
+				</section>
+				<section>
+					<h3>why quasar exists?</h3>
+					<img src="./img/Thinking.svg"/>
+				</section>
+
+				<section>
+					<section>
+					<h3>what is quasar?</h3>
+					<img src="./img/quasar.png"/>
+					</section>
+					    <section>
+      <div class="full-width row justify-center">
+         <a
+            href="https://twitter.com/youyuxi/status/1094033578239893504?ref_src=twsrc%5Etfw"
+            ><img src="./img/tweet.png" /></a
+          >
+      </div>
+    </section>
+    <section>
+      <div style="height:60px;" class="row justify-center item-center cg-pb-3">
+        <h5 class="cg-px-2">What is Quasar Framework?</h5>
+      </div>
+
+      <ul>
+        <li class="fragment">Framework</li>
+        <li class="fragment">CLI</li>
+        <li class="fragment">UI Library</li>
+      </ul>
+    </section>
+    <section>
+      <div style="height:60px;" class="row justify-center item-center cg-pb-3">
+        <h5 class="cg-px-2">What is Quasar Framework?</h5>
+      </div>
+      <div class="fragment box cg-px-4 cg-py-2 cg-mt-2">
+        <p>
+          Quasar Framework is a framework build on top of Vue.js , that allows
+          you to build
+          <span class="fragment">Modern Website (SPA, PWA, SSR), </span>
+          <span class="fragment">Mobile App (iOS, Android), </span>
+          <span class="fragment">and Desktop App (Windows, MacOS, Linux)</span>
+        </p>
+      </div>
+    </section>
+   <section>
+    <h5>Web</h5>
+    <div class="row fragment">
+      <div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <h5>
+           SINGLE PAGE APPLICATION <br />
+            (SPA)
+          </h5>
+          <span>Client side routing, Vuex, IE11 support, i18n</span>
+        </div>
+      </div>
+    </div>
+	<div class="row fragment">
+      <div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <h5>
+           SERVER SIDE RENDERING <br />
+            (SSR)
+          </h5>
+          <span>Node.js, Express</span>
+        </div>
+      </div>
+    </div>
+	<div class="row fragment">
+      <div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <h5>
+           PROGRESSIVE WEB APP<br />
+            (PWA)
+          </h5>
+          <span>Service Worker, manifest.json</span>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section>
+      <h5>Mobile App</h5>
+      <img style="height:300px;" class="fragment" data-src="img/cordova.png" />
+	  	<div class="row">
+			<div class="fragment col" style="margin-right:30px;" class="fragment">
+				 <div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <img src="./img/android.png" width="80px" height="80px">
+          <h5>
+           Android
+          </h5>
+        </div>
+      </div>
 			</div>
+			<div class="fragment col">
+		<div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <img src="./img/apple.png" height="80px">
+          <h5>
+           ios
+          </h5>
+        </div>
+      </div>
+	</div>
+     
+    </div>
+    </section>
+    <section>
+      <h5>Desktop App</h5>
+      <img style="height:300px;" class="fragment" data-src="img/electron.svg" />
+	  	<div class="desktop row">
+		<div class="fragment desktop-col" style="margin-right:30px;" class="fragment">
+		<div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <img src="./img/Windows.png" width="80px" height="80px">
+          <h5>
+           Windows
+          </h5>
+        </div>
+      </div>
+			</div>
+			<div class="fragment desktop-col" style="margin-right:30px;">
+		<div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <img src="./img/apple.png" height="80px">
+          <h5>
+           mac
+          </h5>
+        </div>
+      </div>
+	</div>
+	<div class="fragment desktop-col">
+		<div class="q-card bg-grey-8 cg-px-4 cg-mt-2 col-12">
+        <div class="q-card-section">
+          <img src="./img/linux.png" height="80px">
+          <h5>
+           Linux
+          </h5>
+        </div>
+      </div>
+	</div>
+     
+    </div>
+    </section>
+				</section>
+				<section>
+					<h4>Fetures of quasar</h4>
+					<img src="./img/quasar-feature.png" height="600px"/>
+				</section>
+
+				<section>
+					<section>
+						<h2>Quasar's motto</h2>
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;write code once and simultaneously deploy it.&rdquo;
+					</blockquote>
+					</section>
+					<!-- <section>
+					<ul>
+					<li>state-of-the-art UI (that follows Material Guidelines</li>
+					<li>Support for desktop and mobile browsers (including ios safari)</li>
+					<li>customizable CSS and extendable JS</li>
+					</ul>
+					</section> -->
+					<!-- <section>
+					<p>Zero-configuration features:</p>
+					<ul>
+					<li>cache busting</li>
+					<li>tree shaking</li>
+					<li>lazy loading</li>
+					<li>ES6 transpiling</li>
+					<li>code linting</li>
+					</ul>
+					</section> -->
+				</section>
+				<section>
+					<section>
+						<h2>What is Hybrid apps</h2>
+						<ul class="font-size">
+							<li>Hybrid apps are like any other apps you find in your phone.</li>
+							<li>Hybrid apps are built with a combination of web technologies like HTML, CSS and JavaScript</li>
+							<li>The key diffrence is that Hybrid apps are hosted inside a native application that utilizes a mobile platform's WebView</li>
+							
+								<!-- <li>Hybrid app development involves building a single app that can run on multiple platforms using web technologies such as HTML, CSS, and JavaScript.</li> 
+								<li>Hybrid apps are essentially web apps that are wrapped in a native app container, which allows them to access native device features like the camera and accelerometer.</li> 
+								<li>The app runs on the device using a built-in browser called a WebView.</li>
+								<li>Hybrid apps are usually built using frameworks like Ionic, PhoneGap, and Apache Cordova.</li> -->
+							
+						</ul>
+					</section>
+						<section>
+						<h2>Example of  Hybrid apps</h2>
+
+							<div class="row">
+								<div class="col">
+								<img src="./img/gmail.png" width="100px" height="100px">
+
+								</div>
+								<div class="col">
+								<img src="./img/instagram.png" width="100px" height="100px">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="./img/uber.png" width="100px" height="100px">
+								</div>
+								<div class="col">
+									<img src="./img/twitter.png" width="100px" height="100px">
+								</div>
+							</div>
+							
+							
+				</section>
+				</section>
+				<section>
+
+					<section>
+					<h2>Demo</h2>
+					<h5>SPA, PWA, Desktop, Mobile</h5>
+					<a href="https://my-quasar-notes-app.netlify.app/#/">Notes App</a>
+				</section>
+				</section>
+			
+
+				<section>
+					<section>
+						<h2>Installation</h2>
+						There are three ways to start using Quasar:
+						<ul>
+						<li>embedding to an existing project via a content delivery network (CDN);</li>
+						<li>installing using the Vue.js CLI Quasar plugin;</li>
+						<li>installing using the Quasar CLI.</li>	
+					</ul>						
+					</section>
+					<section>
+						<h2>installing using the Quasar CLI.</h2>
+						<pre><code data-trim data-noescape>
+						yarn global add @quasar/cli
+						# or
+						npm install -g @quasar/cli
+						</code></pre>
+					</section>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Project Set-Up </h2>
+						<p  data-id="code-title">Run the following command in your CLI:</p>
+						<pre><code data-trim data-noescape>
+						yarn create quasar
+						# or
+						npm init quasar
+						</code></pre>
+					</section>
+					<section>
+						<p>Following this, you are going to be asked some questions. Here is my full configuration for the app we will be building.</p>
+						<a href="project-setup-options.png" target="_blank" class="navigate-down">
+							<img class="r-frame" height="400px"  src="./img/project-setup-options.png" alt="configuration">
+						</a>
+					</section>
+					<section>
+						<p>Now we can move into the project folder and start up the application using the following commands:</p>
+						<pre><code data-trim data-noescape>
+						cd folder_name
+						quasar dev
+						</code></pre>
+					</section>
+					<section>
+						<p>With the steps above complete, our app should be running on http://localhost:9000. This is what we should see:</p>
+						<a href="project-setup-options.png" target="_blank" class="navigate-down">
+							<img class="r-frame" height="400px"  src="./img/project-running.png" alt="configuration">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Quasar’s Folder Structure</h2>
+					<a href="folderstructure.png" target="_blank" class="navigate-down">
+							<img class="r-frame" height="400px"  src="./img/folderstructure.png" alt="configuration">
+					</a>
+					</section>
+					
+					<section>
+						<p>The source folder consists of about seven major directories that a beginner should care about:</p>
+						<ol>
+							<li>quasar.conf.js</li>
+							<li>src/assets</li>
+							<li>src/components</li>
+							<li>src/css</li>
+							<li>src/layouts</li>
+							<li>src/pages</li>
+							<li>src/router</li>
+						</ol>
+					</section>
+				</section>
+
+<section>
+					<section>
+					<h2>quasar.config.js</h2>
+						<p>The Quasar application relies heavily on its configuration file</p>
+					<ul class="font-size">
+						<li class="fragment">appConfig: This option is used to configure various settings related to the application, such as its name, description, and icon.</li>
+  <li class="fragment">build: This option is used to configure the build process for your app, including settings for each platform (e.g. web, Android, iOS, and desktop).</li>
+  <li class="fragment">devServer: This option is used to configure the development server that is used when running your app in development mode.</li>
+					</ul>
+					</section>
+					<section>
+<ul>
+  <li class="fragment">framework: This option allows you to configure the various components, directives, and plugins that are included in your app.</li>
+  <li class="fragment">animations: This option allows you to enable or disable certain animations and transitions in your app.</li>
+					</ul>
+					</section>
+					<section>
+						<ul>
+							 <li class="fragment">extras: This option is used to configure additional Quasar components and plugins that are not included in the default installation.</li>
+  <li class="fragment">electron: This option is used to configure the behavior of your app when running as an Electron desktop application.</li>
+  <li class="fragment">cordova: This option is used to configure the behavior of your app when running as a Cordova mobile application.</li>
+
+						</ul>
+					</section>
+					<section>
+						 <li class="fragment">capacitor: This option is used to configure the behavior of your app when running as a Capacitor mobile application.</li>
+  <li class="fragment">ssr: This option is used to configure server-side rendering for your app.</li>
+  <li class="fragment">pwa: This option is used to configure the behavior of your app when running as a Progressive Web Application.</li>
+					</section>
+				</section>
+
+<section>
+		<div class="row">
+				<img src="./img/layoutandpages.png" />
+				<h2>Layout and Pages</h2>
+	</div>
+</section>
+				<section data-background-iframe="https://quasar.dev/layout/layout" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>App Layout and Pages</h2>
+						<p>Quasar provides several app layout options to help you create responsive and flexible user interfaces.</p>
+					</div>
+				</section>
+
+				<section>
+				<img src="./img/vue-custom-element.png" />
+				<h2>Vue components</h2>
+				</section>
+				<section data-background-iframe="https://quasar.dev/components" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Vue components</h2>
+						<p>Quasar is a popular UI library for Vue.js that provides a comprehensive set of pre-made components to help developers quickly build beautiful and responsive web applications.</p>
+					</div>
+				</section>
+			
+			<section>
+				<img src="./img/css.png" />
+				<h2>Styles</h2>
+			</section>
+
+<section data-background-iframe="https://quasar.dev/style/typography" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Style & Identity </h2>
+						<p>Quasar's Style & Identity system allows developers to easily customize the look and feel of their web applications using predefined themes, CSS variables, and other powerful features.</p>
+					</div>
+				</section>
+
+
+			</div>
+
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
+
 		</script>
+
 	</body>
 </html>
+
